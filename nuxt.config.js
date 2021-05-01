@@ -17,6 +17,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/global.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -32,9 +33,55 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['nuxt-fontawesome', {
+      component: 'fa',
+      imports: [
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faDotCircle']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faAngleRight']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faChild']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faHockeyPuck']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faGhost']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faPortrait']
+        },
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faFacebookSquare']
+        },
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faLinkedin']
+        },
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faTwitter']
+        },
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faYoutube']
+        }
+      ]
+    }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    ssr: true
   }
 }

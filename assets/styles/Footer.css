@@ -1,0 +1,79 @@
+.footer {
+  margin-top: 88px;
+  padding-left: 53px;
+  padding-right: 88px;
+}
+.nav {
+  height: 244px;
+  border-top: 3px solid #2a394a;
+  border-bottom: 1px solid #2a394a;
+}
+.nav-logo {
+  float: left;
+  margin-top: 36px;
+  color: #2a394a;
+}
+.nav-logo-mark {
+  display: inline-block;
+  font-size: 40px;
+  vertical-align: middle; 
+}
+.nav-logo-arrow {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: 4px;
+}
+.nav-logo-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-left: -5px;
+  margin-top: 4px;
+}
+
+.nav-right {
+  float: right;
+  margin-top: 42px;
+}
+.nav-right-group {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 55px;
+  color: #2a394a;
+}
+.nav-right-group-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.nav-right-group-link {
+  font-size: 14px;
+  margin-top: 14px;
+  font-weight: 500;
+}
+
+.bottom {
+  padding-top: 23px;
+  padding-bottom: 50px;
+}
+.company {
+  display: inline-block;
+}
+.company-about {
+  display: inline-block;
+  color: #2a394a;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 13px;
+  letter-spacing: -1px;
+}
+
+.sns-icon {
+  float: right;
+}
+.sns-icon-link {
+  display: inline-block;
+  font-size: 28px;
+  margin-left: 10px;
+}
