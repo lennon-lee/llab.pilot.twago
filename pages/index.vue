@@ -86,128 +86,70 @@
         </div>    
         <div class="comment-section-cc">150 CC</div>
       </div>
-      <div class="slider-section-wrap">
-        <div class="slider-section">
-          <div class="slider-part">
-            <img class="slider-part-image" src="/images/pexels-ben-cheung-423912.jpg" />
-          </div>
-          <div class="slider-part">
-            <img class="slider-part-image" src="/images/pexels-ben-cheung-424130.jpg" />
-          </div>
-          <div class="slider-part">
-            <img class="slider-part-image" src="/images/pexels-ben-cheung-424131.jpg" />
-          </div>
-          <div class="slider-part">
-            <img class="slider-part-image" src="/images/pexels-ben-cheung-424132.jpg" />
-          </div>
-          <div class="slider-part">
-            <img class="slider-part-image" src="/images/pexels-ben-cheung-424734.jpg" />
-          </div>
-          <div class="slider-part">
-            <img class="slider-part-image" src="/images/pexels-ben-cheung-1555757.jpg" />
-          </div>
-        </div>
+      
+      <!-- Slide Component -->
+      <div>
+        <SlideGroup :data="slideData" :move="600" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SlideGroup from '@/components/ui/SlideGroup.vue';
 export default {
-  layout: 'pageBasic'
+  layout: 'pageBasic',
+  name: 'index',
+  components: {
+    SlideGroup
+  },
+  data () {
+    return {
+      title: 'Twago Home Page',
+      slideData: [
+        {
+          url: '/images/pexels-ben-cheung-424130.jpg',
+          width: 620,
+          height: 286
+        }, {
+          url: '/images/pexels-ben-cheung-1555757.jpg',
+          width: 620,
+          height: 286
+        }, {
+          url: '/images/pexels-ben-cheung-424131.jpg',
+          width: 620,
+          height: 286
+        }, {
+          url: '/images/pexels-ben-cheung-424132.jpg',
+          width: 620,
+          height: 286
+        }, {
+          url: '/images/pexels-ben-cheung-423912.jpg',
+          width: 620,
+          height: 286
+        }, {
+          url: '/images/pexels-ben-cheung-424734.jpg',
+          width: 620,
+          height: 286
+        }
+      ]
+    }
+  },
+  // FOR SEO
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          naem: 'description',
+          content: this.title + ' description'
+        }
+      ]
+    }
+  }
 }
 </script>
 
-<style>
-.main-section-wrap {
-  padding-left: 52px;
-  padding-right: 52px;
-}
-.main-section-type {
-  margin-top: 71px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #2a394a;
-}
-.main-section-title {
-  color: #2a394a;
-  font-size: 53px;
-  font-weight: bold;
-  margin-top: 7px;
-  word-spacing: 0px;
-  line-height: 1.3;
-}
-.article-section-wrap {
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-top: 94px;
-  width: 1060px;
-}
-.article-section {
-  float: left;
-  border: 3px solid #2a394a;
-  width: 480px;
-  height: 412px;
-  padding: 45px 50px;
-  color: #2a394a;
-}
-.article-secton-icon {
-  display: inline-block;
-  font-size: 40px;
-  vertical-align: top;
-}
-.article-section-info {
-  display: inline-block;
-  width: 312px;
-  vertical-align: top;
-  margin-left: 10px;
-  margin-top: 8px;
-}
-.article-section-info-title {
-  font-weight: bold;
-  font-size: 25px;
-}
-.article-section-info-desc {
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 30px;
-  line-height: 1.5;
-}
-.comment-section-wrap {
-  padding-left: 52px;
-  padding-right: 85px;
-  margin-top: 76px;
-}
-.comment-section {
-  display: inline-block;
-  color: #2a394a;
-  font-size: 25px;
-  font-weight: bold;
-  line-height: 1.5;
-  vertical-align: top;
-}
-.comment-section-cc {
-  float: right;
-  font-size: 13px;
-  color: #2a394a;
-  letter-spacing: -1px;
-}
-.slider-section-wrap {
-  margin-top: 118px;
-  overflow: hidden;
-}
-.slider-section {
-  width: 3850px;
-  height: 286px;
-  transform: translate(-263px);
-}
-.slider-part {
-  display: inline-block;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.slider-part-image {
-  width: 620px;
-  height: 286px;
-}
+<style scoped src="@/assets/styles/index.css">
 </style>
