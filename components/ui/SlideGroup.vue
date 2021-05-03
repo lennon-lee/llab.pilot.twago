@@ -44,6 +44,15 @@ export default {
       const style = window.getComputedStyle(target);
       const width = this.data.length * (this.data[0].width + 15);
       target.style.width = width + 'px';
+
+      // add opacity animation
+      document.addEventListener('scroll', function() {
+        if (style.opacity == 0 && window.scrollY > 700) {
+          setTimeout(function() {
+            target.style.opacity = 1;
+          }, 100);
+        }
+      });
     },
     onClick (event, distance) {
       const target = event.target.closest('.slide-group-wrap').getElementsByClassName('slide-group')[0];

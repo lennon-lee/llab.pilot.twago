@@ -4,9 +4,10 @@
   overflow: hidden;
 }
 .slide-group {
+  opacity: 0;
   height: 286px;
   transform: translate(-263px);
-  transition: transform 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
 }
 .slide-arrow {
   position: relative;
